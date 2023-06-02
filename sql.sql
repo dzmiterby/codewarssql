@@ -16,3 +16,33 @@ SELECT * FROM books ORDER BY copies_sold DESC LIMIT 5;
 
 -- =========== 6 Countries Capitals for Trivia Night (SQL for Beginners #6)
 SELECT capital FROM countries WHERE continent IN ('Africa', 'Afrika') AND country LIKE 'E%' ORDER BY capital LIMIT 3;
+
+-- =========== 7 Hello SQL World!
+SELECT 'hello world!' AS "Greeting";
+
+-- =========== 8 SQL Grasshopper: Select Columns
+SELECT custid, custname, custstate FROM customers;
+
+-- =========== 9 1. Find all active students
+SELECT * FROM students WHERE IsActive = 1;
+
+-- =========== 10 SQL Basics: Simple DISTINCT
+SELECT DISTINCT(age) AS age FROM people;
+
+-- =========== 11 SQL Basics: Simple SUM
+SELECT SUM(age) AS age_sum FROM people;
+
+-- =========== 12 SQL Basics: Simple MIN / MAX
+SELECT MIN(age) AS age_min, MAX(age) AS age_max FROM people;
+
+-- =========== 13 SQL Basics: Simple WHERE and ORDER BY
+SELECT * FROM people WHERE age > 50 ORDER BY age DESC;
+
+-- =========== 14 SQL Basics: Simple JOIN
+SELECT products.id, products.name, products.isbn, products.company_id, products.price, companies.name AS company_name FROM products JOIN companies ON companies.id = products.company_id;
+
+-- =========== 15 SQL Basics: Simple GROUP BY
+SELECT age, count(id) AS people_count FROM people GROUP BY age;
+
+-- =========== 16 SQL Basics: Simple JOIN with COUNT
+SELECT p.id, p.name, count(*) as toy_count FROM people p JOIN toys t ON p.id = t.people_id GROUP BY p.id, p.name;
