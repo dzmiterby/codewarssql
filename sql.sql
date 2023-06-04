@@ -52,3 +52,9 @@ SELECT * FROM companies ORDER BY employees DESC;
 
 -- =========== 18 GROCERY STORE: Support Local Products
 SELECT COUNT(country) AS products, country FROM products WHERE country IN('United States of America', 'Canada') GROUP BY country ORDER BY products DESC;
+
+-- =========== 19 SQL Basics: Repeat and Reverse
+SELECT CONCAT(name, name, name) AS name, REVERSE(characteristics) AS characteristics FROM monsters;
+
+-- =========== 20 SQL Bug Fixing: Fix the JOIN
+SELECT id, name, stock FROM products WHERE stock <= 2 AND producent = 'CompanyA' ORDER BY id;
