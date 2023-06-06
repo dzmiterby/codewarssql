@@ -59,5 +59,8 @@ SELECT CONCAT(name, name, name) AS name, REVERSE(characteristics) AS characteris
 -- =========== 20 SQL Bug Fixing: Fix the JOIN
 SELECT id, name, stock FROM products WHERE stock <= 2 AND producent = 'CompanyA' ORDER BY id;
 
--- =========== 21 
+-- =========== 21 SQL: Concatenating Columns
 SELECT CONCAT(prefix, ' ', first, ' ', last, ' ', suffix) AS title FROM names;
+
+-- =========== 22 SQL Basics: Mod
+SELECT mod(number1, number2) AS mod FROM decimals;
