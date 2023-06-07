@@ -64,3 +64,6 @@ SELECT CONCAT(prefix, ' ', first, ' ', last, ' ', suffix) AS title FROM names;
 
 -- =========== 22 SQL Basics: Mod
 SELECT mod(number1, number2) AS mod FROM decimals;
+
+-- =========== 23 Easy SQL: LowerCase
+SELECT id, name, birthday, LOWER(race) AS race FROM demographics;
