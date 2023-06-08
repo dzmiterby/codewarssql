@@ -67,3 +67,6 @@ SELECT mod(number1, number2) AS mod FROM decimals;
 
 -- =========== 23 Easy SQL: LowerCase
 SELECT id, name, birthday, LOWER(race) AS race FROM demographics;
+
+-- =========== 24 Easy SQL: Convert to Hexadecimal
+SELECT to_hex(legs) AS legs, to_hex(arms) AS arms FROM monsters;
