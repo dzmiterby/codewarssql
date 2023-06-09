@@ -70,3 +70,6 @@ SELECT id, name, birthday, LOWER(race) AS race FROM demographics;
 
 -- =========== 24 Easy SQL: Convert to Hexadecimal
 SELECT to_hex(legs) AS legs, to_hex(arms) AS arms FROM monsters;
+
+-- =========== 25 SQL Basics: Simple BETWEEN and ORDER BY
+SELECT name, age FROM persons WHERE age BETWEEN 30 AND 50 ORDER BY age DESC;
