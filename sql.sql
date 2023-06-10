@@ -73,3 +73,8 @@ SELECT to_hex(legs) AS legs, to_hex(arms) AS arms FROM monsters;
 
 -- =========== 25 SQL Basics: Simple BETWEEN and ORDER BY
 SELECT name, age FROM persons WHERE age BETWEEN 30 AND 50 ORDER BY age DESC;
+
+-- =========== 26 SQL with Street Fighter: Total Wins
+SELECT f.name, SUM(f.won) AS won, SUM(f.lost) AS lost FROM fighters AS f
+LEFT JOIN winning_moves AS m ON f.ove_id = m.id 
+WHERE m.move != 'Hadoken' AND m.move != 'Shouoken' AND m.move != 'Kikoken' GROUP BY f.name ORDER BY won DESC LIMIT 6
