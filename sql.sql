@@ -84,3 +84,6 @@ SELECT FLOOR(number1) AS number1, CEIL(number2) AS number2 FROM decimals;
 
 -- =========== 28 Easy SQL: Bit Length
 SELECT id, BIT_LENGTH(name) AS name, birthday, BIT_LENGTH(race) AS race FROM demographics;
+
+-- =========== 29 SQL easy regex extraction
+SELECT name, greeting, unnest(regexp_matches(greeting, '#(\d+)')) AS user_id FROM greetings;
