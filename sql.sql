@@ -87,3 +87,6 @@ SELECT id, BIT_LENGTH(name) AS name, birthday, BIT_LENGTH(race) AS race FROM dem
 
 -- =========== 29 SQL easy regex extraction
 SELECT name, greeting, unnest(regexp_matches(greeting, '#(\d+)')) AS user_id FROM greetings;
+
+-- =========== 30 Easy SQL: Moving Values
+SELECT LENGTH(name) AS id, LENGTH(CAST(legs AS VARCHAR)) AS name, LENGTH(CAST(arms AS VARCHAR)) AS legs, LENGTH(characteristics) AS arms, LENGTH(CAST(id AS VARCHAR)) AS characteristics FROM monsters;
